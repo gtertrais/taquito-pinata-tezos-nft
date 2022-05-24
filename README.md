@@ -1,51 +1,26 @@
-# Learn how to create NFTs on Tezos using Taquito and Pinata
+# Svelte Tezos Template
 
-##### This is a tutorial dapp to show how to create NFTs on Tezos with Taquito and Pinata
+## A Svelte template to build awesome dapps on Tezos!
 
-Structure of the project
+This template comes with all the good stuff you need to start building a dapp on Tezos:
 
-- Frontend folder: contains the dapp users interact with to provide a picture, title and description for their NFT
-- Backend folder: contains the server app to pin the picture and the metadata to Pinata (IPFS)
-- Contract: contains the FA2 contract recording the NFTs
+- Svelte v.3
+- Webpack v.5
+- TypeScript v.3
+- Sass v.5
+- Taquito v.8
+- Beacon SDK v.2
 
-Getting started:
+To use it:
 
-- For the frontend dapp:
+1. `git clone https://github.com/claudebarde/svelte-tezos-template.git`
+2. `cd svelte-tezos-template`
+3. `npm install`
+4. `npm run dev`
 
-```
-npm install
-npm run dev
-```
+Here are a few tips if you are new to creating web apps in Svelte or in general:
 
-You must provide a valid server URL in the `App.svelte` file:
+- Add new Svelte components in the `src` folder, either next to the `App.svelte` or in a new folder, for example, `components`
+- Add new Sass files in the `styles` folder and import them either in the `index.scss` file with `@import "./myfile.scss"` or directly into the `main.ts` file just under `import "./styles/index.scss";`
 
-```js
-// Replace `https://my-cool-backend-app.com` with the address where you deployed the backend app
-
-const serverUrl =
-  process.env.NODE_ENV !== "production"
-    ? "http://localhost:8080"
-    : "https://my-cool-backend-app.com";
-```
-
-- For the backend dapp:
-
-```
-npm install
-npm run dev
-```
-
-You must provide a valid app URL for the CORS options:
-
-```js
-// Replace `https://my-cool-nft-app.com` with the URL of your app
-
-const corsOptions = {
-  origin: ["http://localhost:8082", "https://my-cool-nft-app.com"],
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-```
-
-- For the contract:
-  The code of the contract can be copy-pasted into the [Ligo web IDE](https://ide.ligolang.org/) and originated from there. The default storage is available in a comment block at the bottom of the contract.
-- Pinata: you will need an account on [Pinata](https://pinata.cloud/pinmanager) and [API keys](https://pinata.cloud/keys). Keep your API keys secret!
+Please leave comments for new features and open issues if you have any problem!
