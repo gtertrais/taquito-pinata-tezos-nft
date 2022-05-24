@@ -135,53 +135,6 @@
   });
 </script>
 
-<style lang="scss">
-  $tezos-blue: #2e7df7;
-
-  h1 {
-    font-size: 3rem;
-    font-family: "Roman-SD";
-  }
-
-  button {
-    padding: 20px;
-    font-size: 1rem;
-    border: solid 3px #d1d5db;
-    background-color: #e5e7eb;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  .roman {
-    text-transform: uppercase;
-    font-family: "Roman-SD";
-    font-weight: bold;
-  }
-
-  .container {
-    font-size: 1.3rem;
-    & > div {
-      padding: 20px;
-    }
-
-    label {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-    }
-
-    input,
-    textarea {
-      padding: 10px;
-    }
-
-    .user-nfts {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-</style>
 
 <main>
   <div class="container">
